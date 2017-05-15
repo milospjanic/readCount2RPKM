@@ -12,10 +12,10 @@ x[2:(ncol(x)-1)]<-x[2:(ncol(x)-1)]*1000000
 
 RPKMs are calculated using the formula:
 
-</pre>
+<pre>
 reads per kb = (read count / gene length) * 1000
 reads per kb per million mapped reads (RPKM) = (reads per kb / per sample total read count) * 1,000,000
-<pre>
+</pre>
 
 # Usage
 
