@@ -6,7 +6,7 @@ cp $1 mastertable
 
 cut -f1 mastertable > gene.name
 
-###write R script for ID conversion, needs biomaRt
+###write R script for obtaining transcript lengths, needs biomaRt
 
 echo "#!/usr/bin/Rscript
 library(biomaRt)
@@ -47,7 +47,7 @@ END { for(k in h2)
 }
 " > fileMulti2TableMod1.all.col.file1.awk
 
-#remove duplicates from biomart output
+#remove duplicates from biomart output and select longest transcript
 
 sort -k1,1 -k2,2nr id_merge_ens_length.txt | awk '!a[$1]++' > id_merge_ens_length.unique.txt
 
